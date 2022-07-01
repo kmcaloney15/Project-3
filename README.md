@@ -1,1 +1,1 @@
-# Project 3 by Katy, Sam, and Earl.
+# Project 3. An Organizer by Katy, Sam, and Earl.
