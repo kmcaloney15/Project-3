@@ -38,8 +38,9 @@ export default function HomePage({
               &nbsp;&nbsp;&nbsp;
               <a>
                 <Link to={`/notes`}>
-                  <button className="text-orange-400 bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
-                    <i className="fa-solid fa-plus mb-1"></i>&nbsp; Note
+                  <button className="text-white bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
+                    <i className="fa-solid fa-plus mb-1 text-orange-400"></i>
+                    &nbsp; Note
                   </button>
                 </Link>
               </a>
@@ -60,8 +61,9 @@ export default function HomePage({
               &nbsp;&nbsp;&nbsp;
               <a>
                 <Link to={`/todos/new`}>
-                  <button className="text-orange-400 bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
-                    <i class="fa-solid fa-plus mb-1"></i>&nbsp; To-Do
+                  <button className="text-white bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
+                    <i class="fa-solid fa-plus mb-1 text-orange-400"></i>&nbsp;
+                    To-Do
                   </button>
                 </Link>
               </a>

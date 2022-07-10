@@ -95,7 +95,7 @@ export default function TodoList({
                 <>
                   <div
                     key={idx}
-                    className="border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3 w-[14rem] text-left mr-5"
+                    className="border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3 w-[14rem] h-[7rem] text-left mr-5"
                     id="hardshadow"
                   >
                     <p className="border-black border-b-[1px] text-lg">
@@ -130,7 +130,7 @@ export default function TodoList({
                     {/* <br></br> */}
                     <br />
                     <br />
-                    <button
+                    {/* <button
                       type="submit"
                       value={todo._id}
                       className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400 float-right"
@@ -138,7 +138,7 @@ export default function TodoList({
                       onClick={deleteTodo}
                     >
                       Delete
-                    </button>
+                    </button> */}
                   </div>
                 </>
               ))}
