@@ -82,7 +82,7 @@ export default function NoteListForm({
             name="category"
             value={formData.category}
             onChange={handleChange}
-            className="font-extralight text-2l text-left h-1/2 px-2 py-2"
+            className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
           >
             {allCats.map((cat) => (
               <option value={cat._id} key={cat._id}>

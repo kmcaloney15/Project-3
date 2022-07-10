@@ -44,8 +44,8 @@ export default function TodoIndexPage({
 
             <div className="px-5 py-7">
               <Link to={`/todos/new`}>
-                <button className="border-1 border-black bg-black border-t-[1px] rounded text-white text-large px-1 mx-2">
-                  Create new todo
+                <button className="border-black bg-black border-t-[1px] rounded-lg font-light text-white text-large py-2 px-3 hover:ring hover:ring-orange-400">
+                  Create New To-Do
                 </button>
               </Link>
             </div>

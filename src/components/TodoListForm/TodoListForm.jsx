@@ -15,14 +15,12 @@ export default function TodoListForm({ setUpdated, allCats }) {
     urgency: "",
   });
 
-
-
-  const magic = setUpdated()
+  const magic = setUpdated();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(formData)
-    
+    console.log(formData);
+
     // const oneallCats.filter((cat) => cat.title === formData.category)
     // conso
 
@@ -32,7 +30,7 @@ export default function TodoListForm({ setUpdated, allCats }) {
     // setAllTodos(todos);
     //sending new data to backend
     todoAPI.newTodo(formData);
-    setUpdated(!magic)
+    setUpdated(!magic);
     // get data again from the backend
     // const todos = todoAPI.getAll();
     setFormData({
@@ -40,20 +38,16 @@ export default function TodoListForm({ setUpdated, allCats }) {
       date: "",
       description: "",
       urgency: "",
-      category: ""
-
+      category: "",
     });
-
   }
 
   //*** function = form data ***//
   function handleChange(evt) {
-    
-
     // const updatedTodo = { ...formData, [evt.target.name]: evt.target.value };
 
     // setFormData( evt.target.name === "category"? { ...formData, [evt.target.name]: evt.target.key }:{ ...formData, [evt.target.name]: evt.target.value } );
-    setFormData({ ...formData, [evt.target.name]: evt.target.value } );
+    setFormData({ ...formData, [evt.target.name]: evt.target.value });
 
     console.log(formData);
     // console.log(allCats)
@@ -63,8 +57,7 @@ export default function TodoListForm({ setUpdated, allCats }) {
   return (
     <>
       <div className="p-2 rounded-lg font-light">
-        <div className="font-extralight text-2xl text-left h-1/2 px-2 py-2">
-
+        <div className="font-light text-lg text-left h-1/2 px-2 py-2">
           {/* // don't think I actually want all todos to show on the form */}
           {/* <div>
             {allTodos.map((todo, idx) => (
@@ -86,11 +79,15 @@ export default function TodoListForm({ setUpdated, allCats }) {
             //  {todos}
           </div> */}
 
-          <h3>Create a new to-do</h3>
+          <h3 className="font-semibold text-lg">Create New To-Do</h3>
         </div>
-        <form action="" onChange={handleChange} className="border-black border-[1px] rounded-md py-4 px-4 font-light text-justify"
-          id="hardshadow">
-          <label className="font-extralight text-xl text-2l text-left h-1/2 px-2 py-2">
+        <form
+          action=""
+          onChange={handleChange}
+          className="border-black border-[1px] rounded-md py-4 px-4 font-light text-justify"
+          id="hardshadow"
+        >
+          <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Title
           </label>
           <input
@@ -98,10 +95,10 @@ export default function TodoListForm({ setUpdated, allCats }) {
             name="title"
             value={formData.title}
             placeholder="write here..."
-            className="bg-[#f7f7f2] text-lg border-b-[1px] border-black outline-0"
+            className="bg-[#f7f7f2] border-b-[1px] border-black outline-0"
           />
           <p>&nbsp;</p>
-          <label className="font-extralight text-xl text-2l text-left h-1/2 px-2 py-2">
+          <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Date
           </label>
           <input
@@ -109,36 +106,47 @@ export default function TodoListForm({ setUpdated, allCats }) {
             name="date"
             value={formData.date}
             placeholder="write here..."
+            className="bg-[#f7f7f2]"
           />
           <p>&nbsp;</p>
 
           {/* // temporarily commenting out category to get the to-do to work and then can incorporate in the categories back in -KM */}
 
-          <label className="font-extralight text-xl text-2l text-left h-1/2 px-2 py-2" >Category</label>
-        
+          <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+            Category
+          </label>
 
-          <select name="category" value={formData.category} className="font-extralight text-2l text-left h-1/2 px-2 py-2">
-
-            {allCats.map((cat) => <option  value={cat._id} key={cat._id} >{cat.title}</option>)}
-
+          <select
+            name="category"
+            value={formData.category}
+            className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
+          >
+            {allCats.map((cat) => (
+              <option value={cat._id} key={cat._id}>
+                {cat.title}
+              </option>
+            ))}
 
             {/* <option value="A">a</option>
             <option value="B">b</option>
             <option value="C">c</option> */}
           </select>
           <p>&nbsp;</p>
-          <label className="font-extralight text-xl text-2l text-left h-1/2 px-2 py-2">
+          <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Urgency
           </label>
-          <select name="urgency" value={formData.urgency} className="font-extralight text-2l text-left h-1/2 px-2 py-2">
-
+          <select
+            name="urgency"
+            value={formData.urgency}
+            className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
+          >
             <option value="low">Low</option>
             <option value="Medium">Medium</option>
             <option value="High">High</option>
           </select>
 
           <p>&nbsp;</p>
-          <label className="font-extralight text-xl text-2l text-left h-1/2 px-2 py-2">
+          <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Description
           </label>
           <input
@@ -146,18 +154,18 @@ export default function TodoListForm({ setUpdated, allCats }) {
             name="description"
             value={formData.description}
             placeholder="write here..."
+            className="bg-[#f7f7f2] outline-0"
           />
           <p>&nbsp;</p>
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-[#1f1f1f] text-white font-medium py-2 px-4 rounded hover:ring hover:ring-orange-400"
+            className="bg-[#1f1f1f] text-white font-light py-2 px-4 rounded-lg hover:ring hover:ring-orange-400"
           >
-            Create new to-do
+            Create New To-Do
           </button>
         </form>
       </div>
     </>
   );
 }
-
