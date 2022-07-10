@@ -6,6 +6,8 @@ import * as catAPI from "../../utilities/categories-api";
 import * as noteAPI from "../../utilities/notes-api";
 import TodoListItem from "../../components/TodoListItem/TodoListItem";
 import NoteHorizontal from "../../components/NoteHorizontal/NoteHorizontal";
+import TodoHorizontal from "../../components/TodoHorizontal/TodoHorizontal";
+import { Link } from "react-router-dom";
 
 export default function HomePage({
   user,
@@ -32,7 +34,15 @@ export default function HomePage({
         <div className="h-[85%]">
           <div className="font-light text-left h-1/2 px-2 pt-2 border-[#1f1f1f] border-b-[1px] overflow-hidden">
             <div>
-              <h1 className="text-2xl font-extralight">Notes</h1>
+              <a className="text-2xl font-extralight">Notes</a>
+              &nbsp;&nbsp;&nbsp;
+              <a>
+                <Link to={`/notes`}>
+                  <button className="text-orange-400 bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
+                    <i className="fa-solid fa-plus mb-1"></i>&nbsp; Note
+                  </button>
+                </Link>
+              </a>
             </div>
             <div className="overflow-auto">
               <NoteHorizontal
@@ -44,14 +54,26 @@ export default function HomePage({
               />
             </div>
           </div>
-          <div className="font-extralight text-2xl text-left h-1/2 px-2 pt-2">
-            <h1>To-Do's</h1>
-            {/* <TodoList
-              allTodos={allTodos}
-              setAllTodos={setAllTodos}
-              setUpdated={setUpdated}
-              activeCat={activeCat}
-            /> */}
+          <div className="font-light text-left h-1/2 px-2 pt-2 border-[#1f1f1f] overflow-hidden">
+            <div>
+              <a className="text-2xl font-extralight">To-Do's</a>
+              &nbsp;&nbsp;&nbsp;
+              <a>
+                <Link to={`/todos/new`}>
+                  <button className="text-orange-400 bg-[#1f1f1f] items-end font-medium py-1 px-2 rounded-lg hover:ring hover:ring-orange-400 float-right">
+                    <i class="fa-solid fa-plus mb-1"></i>&nbsp; To-Do
+                  </button>
+                </Link>
+              </a>
+            </div>
+            <div className="overflow-auto">
+              <TodoHorizontal
+                allTodos={allTodos}
+                setAllTodos={setAllTodos}
+                setUpdated={setUpdated}
+                activeCat={activeCat}
+              />
+            </div>
           </div>
         </div>
         {/* <button onClick={handleCheckToken}>Check When My Login Expires</button> */}
