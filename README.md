@@ -43,11 +43,11 @@ Finished homepage.
 
 ![Finished Notes Pages](./img/final-notes.png)
 
-Finished notes index and new pages.
+Finished notes page.
 
 ![Finished Todos Pages](./img/final-todos.png)
 
-Finished todos index and new pages.
+Finished todos page.
 
 ## The ERD: 
 
