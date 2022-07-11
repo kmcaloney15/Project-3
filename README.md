@@ -11,7 +11,7 @@ Happy organizing!
 
 
 ## Getting started:
-[ClearSight Link](https://great-reads-project.herokuapp.com)
+[ClearSight Link](https://clearsight-sei.herokuapp.com/)
 
 [Trello Board Link](https://trello.com/invite/b/LqfJ94a2/8a2a0c57a5bff3e1d0ffb2942ebff9af/group-project)
 
@@ -37,17 +37,17 @@ Concept ideas for the notes index and new pages.
 
 Concept ideas for the todos index and new pages.
 
-![Finished Homepage](./img/)
+![Finished Homepage](./img/final-homepage.png)
 
 Finished homepage.
 
-![Finished Notes Pages](./img/)
+![Finished Notes Pages](./img/final-notes.png)
 
-Finished notes index and new pages.
+Finished notes page.
 
-![Finished Todos Pages](./img/)
+![Finished Todos Pages](./img/final-todos.png)
 
-Finished todos index and new pages.
+Finished todos page.
 
 ## The ERD: 
 
@@ -83,7 +83,7 @@ List of the routes used.
 
 
 ## Future goals:
-- [ ] Connect an api to add todos onto a calendar
+- [x] Connect an api to add todos onto a calendar
 - [ ] Dark mode
 
 
