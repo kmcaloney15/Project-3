@@ -19,7 +19,7 @@ Happy organizing!
 ## User Story:
 
 - Users should be able to create their own profiles to get access to their notes and todos.
-- Users should be able to create, edit and delete their own notes and todos.
+- Users should be able to create, edit and delete their own todos.
 - Users should also be able to create, edit and delete their own categories to sort their notes and todos.
 
 
