@@ -29,7 +29,7 @@ export default function HomePage({
       <div className="w-screen h-screen px-8 overflow-hidden">
         <h1 className="font-medium text-3xl text-left px-2 pt-6 pb-2 border-[#1f1f1f] border-b-[1px]">
           <i className="fa-solid fa-house text-orange-400"></i>
-          &nbsp; Ello, {user.name}!
+          &nbsp; Hello, {user.name}!
         </h1>
         <div className="h-[85%]">
           <div className="font-light text-left h-1/2 px-2 pt-2 border-[#1f1f1f] border-b-[1px] overflow-hidden">
