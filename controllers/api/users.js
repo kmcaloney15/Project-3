@@ -22,16 +22,17 @@ async function login(req, res) {
 
 async function create(req, res) {
     try {
-        // Add the user to the datebase
+        // console.log(req.body)
         const user = await User.create(req.body)
+        // console.log(user)
+        // Add the user to the datebase
         // token will be a string
         const token = createJWT(user)
         // Yes, we can use res.json to send back just a string
         // The client code needs to take this into consideration
         res.json(token);
     } catch (err) {
-        // Client will check for non-2xx status code 
-        // 400 = Bad Request
+        // Client will check for non-2xx status code 400 = Bad Request
         res.status(400).json(err)
     }
 }

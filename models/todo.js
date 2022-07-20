@@ -4,16 +4,13 @@ require('./category')
 
 // make todo schema
 const todoSchema = new Schema({
-  // do we need to include users so that way the user will only see their specific to-dos? -K
+
   // user: { type: Schema.Types.ObjectId, ref: 'User' },
   title: { type: String, required: true },
   date: Date,
   // time: String,
   sortOrder: Number,
   description: String,
-
-  // isCompleted: boolean,
-  // temporarily commenting out category to get the to-do to work and then can incorporate in the categories back in -K
   category: { type: Schema.Types.ObjectId, ref: "Category" },
 
   urgency:String
